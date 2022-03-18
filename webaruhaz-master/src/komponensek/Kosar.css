@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&display=swap');
+.Kosar{
+    border-radius: 10px;
+   
+    margin: 1rem;
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: 100%;
+    max-height: 350px;
+    width: fit-content;
+    padding: 2rem;
+   
+    
+    border-radius: 12px;
+    
+}
+.Kosar .Kep{
+    display: grid;
+    grid-template-areas: "kep cim ar";
+    align-items: center;
+    gap:1rem;
+    background-color: white;
+    margin: .5rem;
+}
+.dollar{
+    color:rgb(88, 144, 4);
+}
+.Kosar .Kep img{
+    width: 50px;
+    height: 50px;
+}
+.Kosar .Button-Group{
+    display: none;
+}
+.Kosar .Kep .cim{
+    width:200px;
+    grid-area: cim;
+    background-color: transparent;
+    color:black;
+}
+.Kosar .Kep .ar{
+    width:100px;
+    grid-area: ar;
+    background-color: transparent;
+}
+.Kosar .Kep .kep{
+    
+    grid-area: kep;
+}
+.Kosar-darab{
+    display: flex;
+    align-items: center;
+    
+}
+.darab-badge{
+    font-size: 1.1rem;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 5px;
+    margin: .5rem;
+    font-weight: 600;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    background-color: rgb(248, 58, 89);
+    color: white;
+}

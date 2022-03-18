@@ -1,0 +1,78 @@
+
+.Kosar-Termekek{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+    
+}
+.Termekek{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    justify-content: center;
+    margin: 1rem;
+    gap: 2.5rem;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    background-color: transparent;
+    border-radius: 12px;
+    
+    
+}
+.Vegosszeg{
+    border-top:1px solid deeppink;
+    margin-top: 1rem;
+   background-color: white;
+   padding-bottom: .5rem;
+   border-radius: 5px;
+    padding-top: .5rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: left;
+    text-indent: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+   
+}
+.Vegosszeg-ar{
+    padding-right: 1rem;
+}
+html{
+    width: 99vw;
+    overflow-x: hidden;
+    background-image: url("../kepek/joanna-kosinska-vouDD7K0FoA-unsplash.jpg");
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  
+}
+.bg{
+    display: block;
+    width: 100vw;
+    height: 20vh;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Oooh+Baby&display=swap');
+.bg .cursive{
+    font-family: 'Oooh Baby', cursive;
+    font-size: 50px;
+    text-align: center;
+    display: block;
+    color:rgb(243, 53, 85);
+    font-weight:600;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Roboto&display=swap');
+.bg .vastag{
+    display: block;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    color:rgb(243, 53, 85);
+    font-weight: 800;
+    
+}

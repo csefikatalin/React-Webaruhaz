@@ -1,0 +1,116 @@
+{
+  "termekek": [
+    {
+      "id": 0,
+      "title": "Muffin",
+      "img": "https://images.unsplash.com/photo-1595450269117-a4c68af150d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "ar": 150,
+      "ertekeles":3
+    },
+    {
+      "id": 1,
+      "title": "Gyümölcs-kosár",
+      "img": "https://images.unsplash.com/photo-1614174486496-344ef3e9d870?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
+      "ar": 250,
+      "ertekeles":4
+    },
+    {
+      "id": 2,
+      "title": "Perec",
+      "img": "https://images.unsplash.com/photo-1632116766245-ac9ff0e59ceb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+      "ar": 200,
+      "ertekeles":3
+    },
+    {
+      "id": 3,
+      "title": "Croissants",
+      "img": "https://images.unsplash.com/photo-1600521853186-93b88b3a07b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+      "ar": 350,
+      "ertekeles":5
+    },
+    {
+      "id": 4,
+      "title": "Fánk",
+      "img": "https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+      "ar": 150,
+      "ertekeles":2
+    },
+    {
+      "id": 5,
+      "title": "Macaron",
+      "img": "https://images.unsplash.com/photo-1570476922354-81227cdbb76c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+      "ar": 250,
+      "ertekeles":5
+    },
+    {
+      "id": 6,
+      "title": "Gumicukor",
+      "img": "https://images.unsplash.com/photo-1600359756098-8bc52195bbf4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
+      "ar": 200,
+      "ertekeles":3
+    },
+    {
+      "id": 7,
+      "title": "Tea sütemények",
+      "img": "https://images.unsplash.com/photo-1591123220262-87ed377f7c08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+      "ar": 1550,
+      "ertekeles":4
+    },
+    {
+      "id": 8,
+      "title": "Torta",
+      "img": "https://images.unsplash.com/photo-1565467988204-44fc3fd3c726?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "ar": 450,
+      "ertekeles":4
+    },
+    {
+      "id": 9,
+      "title": "Jégkrém",
+      "img": "https://images.unsplash.com/photo-1586769412527-ab0855979b2e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "ar": 60,
+      "ertekeles":5
+    },
+    {
+      "id": 10,
+      "title": "Csokoládé",
+      "img": "https://images.unsplash.com/photo-1610450949065-1f2841536c88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "ar": 200,
+      "ertekeles":3
+    },
+    {
+      "id": 11,
+      "title": "Cukor bot",
+      "img": "https://images.unsplash.com/photo-1576025916944-438d601fc0bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "ar": 350,
+      "ertekeles":5
+    },
+    {
+      "id": 12,
+      "title": "Bon-bon válogatás",
+      "img": "https://images.unsplash.com/photo-1605497391913-143c1c547a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "ar": 1500,
+      "ertekeles":4
+    },
+    {
+      "id": 13,
+      "title": "Yummy süti",
+      "img": "https://images.unsplash.com/photo-1623325095667-51694567c504?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "ar": 250,
+      "ertekeles":3
+    },
+    {
+      "id": 14,
+      "title": "Japán különlegesség",
+      "img": "https://images.unsplash.com/photo-1568123558486-79a6c55016e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+      "ar": 200,
+      "ertekeles":4
+    },
+    {
+      "id": 15,
+      "title": "Nyalóka",
+      "img": "https://images.unsplash.com/photo-1581700261299-b342aa7174cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "ar": 350,
+      "ertekeles":5
+    }
+  ]
+}
