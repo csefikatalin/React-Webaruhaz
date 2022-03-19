@@ -95,7 +95,9 @@
     width: 50px;
     margin: auto;
 }
-
+.Kereso-container .ertekeles{
+    display: none;
+}
 .Kereso-container .Kep .cim{
    
     color:black;
