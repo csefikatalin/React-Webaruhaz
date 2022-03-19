@@ -1,24 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&display=swap');
 .Kosar{
     border-radius: 10px;
-   
-    margin: 1rem;
+    margin: 3rem;
     padding: .5rem;
     display: grid;
     grid-template-columns: 100%;
     max-height: 350px;
     width: fit-content;
-    padding: 2rem;
     border-radius: 12px;
+    background: white;
+    overflow-y: auto;
     
 }
 .Kosar .Kep{
     display: grid;
-    grid-template-areas: "kep cim ar";
+    grid-template-areas: "kep cim ar torol";
     align-items: center;
     justify-content: center;
-    gap:1rem;
-    background-color: white;
+    background-color:transparent;
     margin: .5rem;
 }
 .dollar{
@@ -28,7 +27,9 @@
     width: 50px;
     height: 50px;
 }
-
+.Kosar .ertekeles{
+    padding: 0;
+}
 .Kosar .Kep .cim{
     width:200px;
     grid-area: cim;
@@ -43,6 +44,20 @@
 .Kosar .Kep .kep{
     
     grid-area: kep;
+}
+.Kosar .Kep button{
+    grid-area: torol;
+    padding: .5rem;
+    border: none;
+    background: transparent;
+    color: red;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-right: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 .Kosar-darab{
     display: flex;

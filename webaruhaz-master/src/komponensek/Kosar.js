@@ -53,7 +53,7 @@ class Kosar extends React.Component {
         </div>
       );
     } else {
-      return  <div className="Kosar"></div>
+      return  <div className="Ures"></div>
     }
   }
 }

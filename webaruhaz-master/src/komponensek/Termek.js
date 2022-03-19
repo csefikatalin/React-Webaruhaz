@@ -2,6 +2,7 @@ import React from "react";
 import './Termek.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import {faMinus} from '@fortawesome/free-solid-svg-icons';
 
 class Termek extends React.Component{
     constructor(props){
@@ -30,7 +31,7 @@ class Termek extends React.Component{
             <div className="ar">{this.props.ar} <span className="dollar">$</span></div>
             <button onClick={()=>{
                     this.props.torol(this.props.id);
-                    }}> - </button>
+                    }}><FontAwesomeIcon icon={faMinus} /></button>
         </div>)
         }
         else{
