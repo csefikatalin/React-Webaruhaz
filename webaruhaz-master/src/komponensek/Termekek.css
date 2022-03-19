@@ -2,7 +2,7 @@
 .Kosar-Termekek{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 10rem;
+    gap: 5rem;
     
 }
 .Termekek{
@@ -23,13 +23,15 @@
 html{
     width: 99vw;
     overflow-x: hidden;
-    background-image: url("../kepek/joanna-kosinska-vouDD7K0FoA-unsplash.jpg");
+    background-image: url("../kepek/blured.png");
     background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
+    background-blend-mode: darken;
     background-position: top;
   
 }
+
 .bg{
     display: block;
     width: 100vw;
