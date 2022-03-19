@@ -2,7 +2,7 @@
 .Szamlalo{
     position: fixed;
     right: 0;
-    top: 2%;
+    top:0.25%;
     display: flex;
     justify-content: center;
     align-items: center;

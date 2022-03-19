@@ -20,15 +20,17 @@
 }
 
 html{
-    width: 99vw;
+    width: 100vw;
     overflow-x: hidden;
     background-image: url("../kepek/blured.png");
     background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-  
+    zoom:70%;
+    margin: auto;
 }
+
 
 
 .bg{
