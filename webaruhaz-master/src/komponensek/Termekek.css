@@ -7,9 +7,8 @@
 }
 .Termekek{
     display:grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
     justify-content: center;
-    
     gap: 2.5rem;
     background-color: white;
     border-radius: 10px;
@@ -27,10 +26,10 @@ html{
     background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: darken;
     background-position: top;
   
 }
+
 
 .bg{
     display: block;
