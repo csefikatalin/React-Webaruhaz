@@ -27,6 +27,7 @@ class Kosar extends React.Component {
       return (
         <div>
           <div className="Kosar">
+            <div>
             {this.termekTomb.map((termek, index) => {
               return (
                 <div className="Kosar-darab" key={index}>
@@ -45,6 +46,7 @@ class Kosar extends React.Component {
                 </div>
               );
             })}
+            </div>
             <div className="Vegosszeg">
               <div className="Vegosszeg-ar">
               <span>Végösszeg</span>
@@ -56,6 +58,7 @@ class Kosar extends React.Component {
               </div>
             </div>
           </div>
+          
         </div>
       );
     } else {

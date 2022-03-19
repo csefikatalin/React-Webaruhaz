@@ -19,7 +19,8 @@
     align-items: center;
     justify-content: center;
     background-color:transparent;
-    margin: .5rem;
+    height: 50px;
+    margin-bottom: .25rem;
 }
 .dollar{
     color:rgb(88, 144, 4);
@@ -67,14 +68,14 @@
 }
 .darab-badge{
     font-size: 1.1rem;
-    padding: 1rem;
+    padding: .25rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 5px;
-    margin: .5rem;
+    
     font-weight: 600;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
-    background-color: rgb(248, 58, 89);
-    color: white;
+
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .Vegosszeg{
     border-top:1px solid deeppink;
