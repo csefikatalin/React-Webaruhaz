@@ -19,7 +19,22 @@ class Termek extends React.Component{
     }
 
     render(){
-        return (<div className="Kep">
+        if(this.props.kosarban){
+            return (<div className="Kep">
+            
+            <div className="kep"><img src={this.props.kep} alt="termekkep"></img></div>
+            <div className="ertekeles">
+            {this.ertekel()}
+            </div>
+            <div className="cim">{this.props.cim}</div>
+            <div className="ar">{this.props.ar} <span className="dollar">$</span></div>
+            <button onClick={()=>{
+                    this.props.torol(this.props.id);
+                    }}> - </button>
+        </div>)
+        }
+        else{
+            return (<div className="Kep">
             
             <div className="kep"><img src={this.props.kep} alt="termekkep"></img></div>
             <div className="ertekeles">
@@ -31,9 +46,10 @@ class Termek extends React.Component{
                 <button onClick={()=>{
                     this.props.vasarol(this.props.id);
                     }}>Add to cart</button>
-                
             </div>
         </div>)
+        }
+        
     }
 }
 

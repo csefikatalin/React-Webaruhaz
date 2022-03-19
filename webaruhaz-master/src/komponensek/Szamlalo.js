@@ -10,7 +10,7 @@ class Szamlalo extends React.Component{
     
     render(){
         return(
-            <div className="Szamlalo"><FontAwesomeIcon icon={faCartShopping}  className="cart"/><span className="darab">{this.props.darab.length}</span></div>
+            <div className="Szamlalo"><FontAwesomeIcon icon={faCartShopping}  className="cart"/><span className="darab">{this.props.darab}</span></div>
         )
     }
 }

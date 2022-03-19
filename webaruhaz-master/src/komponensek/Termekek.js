@@ -12,82 +12,38 @@ class Termekek extends React.Component {
     this.state = {
       termekek: [],
       kosar: [],
-      kosarDb: {},
-      kosarCounter: [],
+      kosarMennyiseg : 0
     };
-    this.ajax();
+ 
   }
-
+ 
   ajax() {
     new Ajax().ajaxGet((termekek) => {
       this.setState({ termekek: termekek });
     });
   }
 
-  vasarol = (index) => {
-    const atmeneti = this.state.kosar;
-    atmeneti.push(this.state.termekek[index]);
-    this.setState({
-      kosar: atmeneti,
-    });
-    this.TermekPerDarab(index);
-  };
+  componentDidMount(){
+    this.ajax();
+  }
 
-    TermekPerDarab = (index) => {
-    let darabok = this.state.kosarDb;
-    let aktualis = this.state.termekek[index];
-    let termekNev = this.state.termekek[index].title;
-    if (darabok[termekNev]) {
-      let ujDb = (darabok[termekNev].db += 1);
-      darabok[termekNev] = { 
-        nev: termekNev,
-        db: ujDb,
-        kep: aktualis.img,
-        ar:aktualis.ar };
-    } else {
-      darabok[termekNev] = { nev: termekNev, db: 1,kep: aktualis.img,
-        ar:aktualis.ar };
-    }
-    this.setState({ kosarDb: darabok });
-    this.kosarSzamol();
-  };
-
-
-  kosarSzamol = () => {
-    let tomb = [];
-    for (const key in this.state.kosarDb) {
-      if (Object.hasOwnProperty.call(this.state.kosarDb, key)) {
-        const element = this.state.kosarDb[key];
-        tomb.push(element);
-      }
-    }
-    this.setState({ kosarCounter: tomb });
-  };
-
-
-  vegOsszeg = () => {
-    let vegar = 0;
-    for (let index = 0; index < this.state.kosar.length; index++) {
-      vegar += this.state.kosar[index].ar;
-    }
-    return vegar;
-  };
-
+  
   render() {
     return (
       <div>
      
       <div>
         
-      <Menu darab={this.state.kosarCounter}></Menu>
+      <Menu darab={this.state.kosarMennyiseg}></Menu>
       </div>
       <div className="bg"><h2><span className="cursive">Welcome to</span><span className="vastag">Candy Land</span></h2></div> 
       <div className="Kosar-Termekek">
        
       
         <Kosar
+          kosarTermekek={this.state.kosarTermekek}
           kosar={this.state.kosar}
-          szamlalok={this.state.kosarCounter}
+          torol = {this.torol}
           ar={this.vegOsszeg()}
         />
          
@@ -103,13 +59,59 @@ class Termekek extends React.Component {
                 ar={termek.ar}
                 ertekeles={termek.ertekeles}
                 vasarol={this.vasarol}
+                
               />
+              
             );
           })}
         </div>
       </div></div>
     );
   }
+  
+
+
+  vasarol = (index) => {
+    const atmeneti = this.state.kosar;
+    atmeneti.push(this.state.termekek[index]);
+    this.setState({
+      kosar: atmeneti,
+    });
+    this.kosarTermekek();
+  }
+
+  torol = (index) => {
+    const atmeneti = this.state.kosar;
+    const torlesUtan = atmeneti.find(elem=>{
+      return elem.id==index
+    });
+
+    let toroltELem = atmeneti.indexOf(torlesUtan);
+    atmeneti.splice(toroltELem,1);
+    this.setState({
+      kosar: atmeneti,
+    });  
+    this.kosarTermekek();
+  };
+
+
+  kosarTermekek(){
+    const kosarTermekek = new Set();
+    this.state.kosar.forEach(t=>{
+    kosarTermekek.add(t);
+    });
+    this.setState({kosarTermekek:kosarTermekek,kosarMennyiseg:kosarTermekek.size});
+  }
+
+
+  vegOsszeg = () => {
+    let vegar = 0;
+    for (let index = 0; index < this.state.kosar.length; index++) {
+      vegar += this.state.kosar[index].ar;
+    }
+
+    return vegar;
+  };
 }
 
 export default Termekek;
