@@ -46,8 +46,14 @@ class Kosar extends React.Component {
               );
             })}
             <div className="Vegosszeg">
+              <div className="Vegosszeg-ar">
               <span>Végösszeg</span>
-              <span className="Vegosszeg-ar">{this.props.ar} $</span>
+              <span >{this.props.ar} $</span>
+              </div>
+              <div className="Button-Group">
+              <button onClick={this.props.kosarUrit} className="Urit">Ürít</button>
+              <button onClick={this.props.kosarUrit} className="Fizet">Fizetes</button>
+              </div>
             </div>
           </div>
         </div>

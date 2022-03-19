@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Termekek from './komponensek/Termekek';
+import Termekek from './komponensek/Webaruhaz';
 
 
 

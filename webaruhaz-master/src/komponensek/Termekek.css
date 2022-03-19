@@ -9,7 +9,7 @@
     display:grid;
     grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
     justify-content: center;
-    margin: 1rem;
+    
     gap: 2.5rem;
     background-color: white;
     border-radius: 10px;
@@ -19,26 +19,7 @@
     
     
 }
-.Vegosszeg{
-    border-top:1px solid deeppink;
-    margin-top: 1rem;
-   background-color: white;
-   padding-bottom: .5rem;
-   border-radius: 5px;
-    padding-top: .5rem;
-    font-weight: 600;
-    font-size: 1.3rem;
-    text-align: left;
-    text-indent: 10px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-   
-}
-.Vegosszeg-ar{
-    padding-right: 1rem;
-}
+
 html{
     width: 99vw;
     overflow-x: hidden;

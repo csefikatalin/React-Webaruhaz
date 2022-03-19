@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Roboto&display=swap');
+
+.Kereso{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: fit-content;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+.Kereso input{
+
+    padding: 1rem;
+   width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+}
+.Talalt-elemek{
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  
+}
+.Kereso button{
+    padding: 1rem;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    background-color:rgb(248, 58, 89);
+    color:white;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+.Kereso span{
+    display: block;
+    padding: .5rem;
+    text-indent: .5rem;
+    font-size: 1.1rem;
+    color:rgb(226, 0, 38);
+}
+.Kereso-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    position: absolute;
+    border-radius: 10px;
+    top:4.5%;
+    left:1%;
+
+}
+
+.Kereso-container .Kep{
+    display: flex;
+    
+    width: 100%;
+    margin: .5rem;
+    background-color: transparent;
+}
+.Kereso-container .Kep > *{
+    flex: 1 1 0px;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+     align-items: center;
+    width: 100%;
+}
+.Kereso-container .Kereso{
+    width: 100%;
+}
+.dollar{
+    color:rgb(88, 144, 4);
+}
+
+.Kereso-container .Kep img{
+   
+    height: 50px;
+    width: 50px;
+    margin: auto;
+}
+
+.Kereso-container .Kep .cim{
+   
+    color:black;
+
+}
+.Kereso-container .Kep .ertekeles{
+    
+}
+.Kereso-container .Kep .kep img{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}

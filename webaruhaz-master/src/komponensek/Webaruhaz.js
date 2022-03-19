@@ -2,6 +2,7 @@ import React from "react";
 import Termek from "./Termek";
 import Kosar from "./Kosar";
 import Menu from "./Menu";
+import Keresomezo from "./KeresoMezo";
 import Ajax from "./Ajax";
 import "./Termekek.css";
 
@@ -12,7 +13,8 @@ class Termekek extends React.Component {
     this.state = {
       termekek: [],
       kosar: [],
-      kosarMennyiseg : 0
+      kosarMennyiseg : 0,
+      keresettTermekek:[]
     };
  
   }
@@ -26,7 +28,6 @@ class Termekek extends React.Component {
   componentDidMount(){
     this.ajax();
   }
-
   
   render() {
     return (
@@ -37,17 +38,18 @@ class Termekek extends React.Component {
       <Menu darab={this.state.kosarMennyiseg}></Menu>
       </div>
       <div className="bg"><h2><span className="cursive">Welcome to</span><span className="vastag">Candy Land</span></h2></div> 
+      <Keresomezo kereses={this.handleChange} talaltTermekek={this.state.keresettTermekek}   vasarol={this.vasarol}></Keresomezo>
       <div className="Kosar-Termekek">
        
-      
+        
         <Kosar
           kosarTermekek={this.state.kosarTermekek}
           kosar={this.state.kosar}
           torol = {this.torol}
+          kosarUrit = {this.kosarUrit}
           ar={this.vegOsszeg()}
         />
          
-      
         <div className="Termekek">
           {this.state.termekek.map((termek, index) => {
             return (
@@ -61,7 +63,6 @@ class Termekek extends React.Component {
                 vasarol={this.vasarol}
                 
               />
-              
             );
           })}
         </div>
@@ -103,6 +104,16 @@ class Termekek extends React.Component {
     this.setState({kosarTermekek:kosarTermekek,kosarMennyiseg:kosarTermekek.size});
   }
 
+  kosarUrit=()=>{
+
+    this.setState({
+      kosar:[],
+      kosarMennyiseg:0,
+      kosarTermekek:null
+    });
+   
+    
+  }
 
   vegOsszeg = () => {
     let vegar = 0;
@@ -111,7 +122,20 @@ class Termekek extends React.Component {
     }
 
     return vegar;
-  };
+  }
+
+  handleChange=(event)=>{
+      let keresendoSzo = event.target.value;
+      let eredmeny = this.state.termekek.filter(termek=>{ return (termek.title.toLowerCase()).includes(keresendoSzo) ||  termek.title.includes(keresendoSzo) || termek.title.toUpperCase().includes(keresendoSzo)});
+      if(keresendoSzo.length>0){
+        this.setState({keresettTermekek:eredmeny});
+      }
+      else{
+        this.setState({keresettTermekek:[]});
+      }
+      
+  }
+
 }
 
 export default Termekek;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&display=swap');
 .Kosar{
     border-radius: 10px;
-    margin: 3rem;
+    margin: 2rem;
     padding: .5rem;
     display: grid;
     grid-template-columns: 100%;
@@ -12,6 +12,7 @@
     overflow-y: auto;
     
 }
+
 .Kosar .Kep{
     display: grid;
     grid-template-areas: "kep cim ar torol";
@@ -74,4 +75,50 @@
     font-family: 'IBM Plex Sans Condensed', sans-serif;
     background-color: rgb(248, 58, 89);
     color: white;
+}
+.Vegosszeg{
+    border-top:1px solid deeppink;
+    margin-top: 1rem;
+    background-color: white;
+    padding-bottom: .5rem;
+
+    padding-top: .5rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: left;
+    text-indent: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+   
+}
+.Vegosszeg-ar{
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.Vegosszeg .Button-Group{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.Urit,.Fizet{
+    background-color: rgb(248, 58, 89);
+    color:white;
+    border: none;
+    border-radius: 5px;
+    padding: .5rem;
+    font-size: 1rem;
+    margin-right: .5rem;
+    cursor: pointer;
+    width: 100px;
+}
+
+.Fizet{
+    background-color:rgb(161, 7, 38);
 }
