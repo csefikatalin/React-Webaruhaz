@@ -35,7 +35,7 @@ class Termek extends React.Component{
         </div>)
         }
         else{
-            return (<div className="Kep">
+            return (<div className="Kep" onClick={()=>{this.props.vasarol(this.props.id)}}>
             
             <div className="kep"><img src={this.props.kep} alt="termekkep"></img></div>
             <div className="ertekeles">
@@ -44,9 +44,7 @@ class Termek extends React.Component{
             <div className="cim">{this.props.cim}</div>
             <div className="ar">{this.props.ar} <span className="dollar">$</span></div>
             <div className="Button-Group">
-                <button onClick={()=>{
-                    this.props.vasarol(this.props.id);
-                    }}>Add to cart</button>
+                <button>Add to cart</button>
             </div>
         </div>)
         }

@@ -32,7 +32,6 @@ class Keresomezo extends React.Component{
                       ar={termek.ar}
                       ertekeles={termek.ertekeles}
                       vasarol={this.props.vasarol}
-                      
                     />
                   );
             })}
