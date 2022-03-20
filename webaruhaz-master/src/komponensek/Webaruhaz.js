@@ -14,21 +14,52 @@ class Termekek extends React.Component {
       termekek: [],
       kosar: [],
       kosarMennyiseg : 0,
-      keresettTermekek:[]
+      keresettTermekek:[],
+      megjelenitettTermekek:[]
     };
- 
+    
   }
  
   ajax() {
     new Ajax().ajaxGet((termekek) => {
-      this.setState({ termekek: termekek });
+      this.setState({ termekek: termekek, megjelenitettTermekek:termekek });
+     
     });
   }
 
   componentDidMount(){
     this.ajax();
   }
+
+
+  pagination=()=>{
+    let gombTomb = [] ;
+    let gombSzama = 1;
+    for (let index = 0; index < this.state.termekek.length; index++) {
+      if(index%5==0) 
+      {
+        gombTomb.push(<button  key={index} onClick={()=>{this.megjelenit(index)}}>{gombSzama}</button>)
+        gombSzama++;
+      }
+    }
+    gombTomb.push(<button key={"osszes"} onClick={()=>{this.setState({megjelenitettTermekek:this.state.termekek})}}>Összes</button>)
+    return gombTomb;
+  }
+
+  megjelenit(index){
+    let i = index;
+    let megjelentiheto = [];
+    while(i<index+5 && i<this.state.termekek.length){
+      megjelentiheto.push(this.state.termekek[i]);
+      i++;
+    }
+    
+    console.log(megjelentiheto)
+    this.setState({megjelenitettTermekek:megjelentiheto});
+  }
   
+
+
   render() {
     return (
       <div>
@@ -50,8 +81,16 @@ class Termekek extends React.Component {
           ar={this.vegOsszeg()}
         />
          
-        <div className="Termekek">
-          {this.state.termekek.map((termek, index) => {
+        <div >
+
+          <div className="gombok">
+          {this.pagination()}
+          </div>
+
+          <div className="Termekek">
+          
+          {this.state.megjelenitettTermekek.map((termek, index) => {
+           
             return (
               <Termek
                 cim={termek.title}
@@ -65,6 +104,7 @@ class Termekek extends React.Component {
               />
             );
           })}
+          </div>
         </div>
       </div></div>
     );

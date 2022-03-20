@@ -21,7 +21,7 @@
 }
 
 html{
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
     background-image: url("../kepek/blured.png");
     background-color: white;
@@ -36,7 +36,7 @@ html{
 
 .bg{
     display: block;
-    width: 100vw;
+    width: 100%;
     height: 20vh;
     margin-top: 5rem;
     margin-bottom: 5rem;

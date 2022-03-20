@@ -12,7 +12,7 @@
     margin-bottom: 2rem;
 }
 .Kereso input{
-
+    background-color: #f7f4f4;
     padding: 1rem;
    width: 100%;
     border: none;
@@ -40,6 +40,7 @@
     font-size: 1.1rem;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
+   
 }
 .Kereso span{
     display: block;
