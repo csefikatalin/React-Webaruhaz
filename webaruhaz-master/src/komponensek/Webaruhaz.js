@@ -15,7 +15,8 @@ class Termekek extends React.Component {
       kosar: [],
       kosarMennyiseg : 0,
       keresettTermekek:[],
-      megjelenitettTermekek:[]
+      megjelenitettTermekek:[],
+      aktivOldal:0
     };
     
   }
@@ -23,12 +24,13 @@ class Termekek extends React.Component {
   ajax() {
     new Ajax().ajaxGet((termekek) => {
       this.setState({ termekek: termekek, megjelenitettTermekek:termekek });
-     
+      this.gombSzinez(0);
     });
   }
 
   componentDidMount(){
     this.ajax();
+   
   }
 
 
@@ -45,6 +47,7 @@ class Termekek extends React.Component {
     }
     gombTomb.push(<button key={"jobbra"} onClick={(event)=>{this.jobbra(event)}}>{">"}</button>)
     gombTomb.push(<button key={"osszes"} onClick={()=>{this.setState({megjelenitettTermekek:this.state.termekek})}}>Összes</button>)
+  
     return gombTomb;
   }
 
