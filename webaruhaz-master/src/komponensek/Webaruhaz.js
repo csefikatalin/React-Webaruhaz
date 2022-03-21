@@ -4,7 +4,7 @@ import Kosar from "./Kosar";
 import Menu from "./Menu";
 import Keresomezo from "./KeresoMezo";
 import Ajax from "./Ajax";
-import "./Termekek.css";
+import "./Webaruhaz.css";
 
 
 class Termekek extends React.Component {
@@ -35,41 +35,88 @@ class Termekek extends React.Component {
   pagination=()=>{
     let gombTomb = [] ;
     let gombSzama = 1;
+    gombTomb.push(<button key={"balra"} onClick={(event)=>{this.balra(event)}}>{"<"}</button>)
     for (let index = 0; index < this.state.termekek.length; index++) {
       if(index%5==0) 
       {
-        gombTomb.push(<button  key={index} onClick={()=>{this.megjelenit(index)}}>{gombSzama}</button>)
+        gombTomb.push(<button className="pagination-button"  key={index} onClick={(event)=>{this.megjelenit(index,event)}}>{gombSzama}</button>)
         gombSzama++;
       }
     }
+    gombTomb.push(<button key={"jobbra"} onClick={(event)=>{this.jobbra(event)}}>{">"}</button>)
     gombTomb.push(<button key={"osszes"} onClick={()=>{this.setState({megjelenitettTermekek:this.state.termekek})}}>Összes</button>)
     return gombTomb;
   }
 
-  megjelenit(index){
+  megjelenit(index,event){
+    
     let i = index;
     let megjelentiheto = [];
+    let gombok = document.querySelectorAll(".pagination-button");
+    gombok.forEach(gomb=>{gomb.classList.remove("focus");})
+    event.target.classList.add("focus");
     while(i<index+5 && i<this.state.termekek.length){
       megjelentiheto.push(this.state.termekek[i]);
       i++;
     }
     
-    console.log(megjelentiheto)
-    this.setState({megjelenitettTermekek:megjelentiheto});
+    this.setState({megjelenitettTermekek:megjelentiheto,aktivOldal:index});
+  }
+
+  gombSzinez(index){
+    let gombok = document.querySelectorAll(".pagination-button");
+    let szinezheto = index/5;
+    console.log(index," ",szinezheto)
+
+    for (let index = 0; index < gombok.length; index++) {
+        if(index==szinezheto){
+          gombok[index].classList.add("focus");
+        }
+      
+    }
   }
   
+  balra(event){
+    let balIndex = this.state.aktivOldal-5;
+    let max = document.querySelectorAll(".pagination-button").length*5-5;
+    if(balIndex<0){
+      balIndex=max;
+      this.megjelenit(balIndex,event);
+    }
+    else{
+      this.megjelenit(balIndex,event);
+    }
+    this.gombSzinez(balIndex)
 
+    event.target.classList.remove("focus");
+  }
+
+  jobbra(event){
+    let jobbIndex = this.state.aktivOldal+5;
+    if(jobbIndex>this.state.termekek.length){
+      jobbIndex=0;
+      this.megjelenit(0,event);
+    }
+    else{
+          
+      this.megjelenit(jobbIndex,event);
+    }
+    this.gombSzinez(jobbIndex)
+  
+
+    event.target.classList.remove("focus");
+  }
 
   render() {
     return (
       <div>
      
-      <div>
-        
+      <div className="Menu-Kereses">
+      <Keresomezo kereses={this.handleChange} talaltTermekek={this.state.keresettTermekek}   vasarol={this.vasarol}></Keresomezo>
       <Menu darab={this.state.kosarMennyiseg}></Menu>
       </div>
       <div className="bg"><h2><span className="cursive">Welcome to</span><span className="vastag">Candy Land</span></h2></div> 
-      <Keresomezo kereses={this.handleChange} talaltTermekek={this.state.keresettTermekek}   vasarol={this.vasarol}></Keresomezo>
+      
       <div className="Kosar-Termekek">
        
         

@@ -1,9 +1,7 @@
 
 .Kosar-Termekek{
-    display: grid;
-    grid-template-columns: 25% 1fr;
-    
-    gap: 5rem;
+    display: block;
+
     
 }
 .Termekek{
@@ -16,8 +14,8 @@
     padding: 2rem;
     background-color: transparent;
     border-radius: 12px;
-    
-    
+    width: 80%;
+    margin: auto;
 }
 
 html{
@@ -60,4 +58,35 @@ html{
     color:rgb(243, 53, 85);
     font-weight: 800;
     
+}
+.gombok{
+    display: flex;
+    gap:1rem;
+    justify-content: center;
+    margin: 1rem;
+}
+.gombok button{
+    background-color: rgb(243, 53, 85);
+    color:white;
+    font-size: 1.1rem;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 5px;
+    height: fit-content;
+    border: none;
+    
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+.gombok button:hover{
+    background-color: white!important;
+    color:  rgb(243, 53, 85)!important;
+    font-weight: 600;
+    cursor: pointer;
+}
+.focus{
+    background-color: white!important;
+    color:  rgb(243, 53, 85)!important;
+    font-weight: 600;
+    cursor: pointer;
 }
